@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-
+last session 57:42 seg https://www.youtube.com/watch?v=vD72tRK8mC4&t=2017s
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

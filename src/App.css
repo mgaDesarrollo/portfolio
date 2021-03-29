@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 .App {
   text-align: center;
+  margin: 0px;
 }
 
 .App-logo {
@@ -37,29 +40,43 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 :root{
   --primary-white:rgb(255, 244, 244);
   --primary-red:rgb(184, 32, 32);
+  --primary-red2:rgb(133, 23, 23);
+
 
   --primary-black:rgb(255,255,255,0);
 }
-
+html{
+  margin-right: 0em;
+  padding-right: 0em;
+}
 body{
   font-family: "roboto Condensed" sans-serif;
+  display: inline-flexbox;
+  margin: 0px;
+margin-right: 0em;  
 }
 /*********************navBar***************************/
 
 .logo{
   width: 5rem;
+  margin-top: 0px;
 }
 
-/******************menuLink***************************/
+/******************menuLink**************************
+.navbar-nav{
+  position:fixed;
+  margin-left: 10px;
+
+}
 
 nav a.nav-link{
   font-size: 0.8rem;
   letter-spacing: 0.0375rem;
   cursor: pointer;
+  
 }
 nav u li {
   text-transform: uppercase;
@@ -70,11 +87,23 @@ nav u li {
   border-top: 0.1875rem solid var(--primary-black);
   margin-right:0.80rem;
 }
+*/
 
+#nb1{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: inline-block !important;
+  opacity: .8;
+  
+}
 .navbar-brand{
-  max-width: 17.25rem;
+  max-width: 27.25rem;
   padding:0 !important;
-  height: 6rem;
+  height: 5rem;
+  z-index: 9999;
+  
+
 }
 
 .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus{
@@ -85,3 +114,270 @@ nav u li {
   border-top: 0.1875rem solid var(--primary-red2);
 
 }
+
+/*********************header***************************/
+.header-wraper{
+  position:relative;
+  right: 0%;
+  background: url(bgh.png) no-repeat;
+  background-size: cover;
+  background-position:center;
+  height: 100vh;
+  z-index: -1;
+  width: 100%;
+  
+}
+
+.main-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "ubuntu" ;
+  margin: 0 auto;
+  
+
+}
+.content{
+display:inline-flexbox;
+}
+.logoHeader{
+  opacity: .5;
+  transition: .5s;
+}
+.logoHeader:hover{
+  transform: scale(1.5);
+  opacity: .3;
+}
+
+.content .main{
+  position: relative;
+  margin-left: 3.8rem;
+  width: 100%;
+  text-align: center;
+}
+.main-info h1{
+  margin-top: 150px;
+  color: var(--primary-red);
+
+}
+
+/*********************typed-text***************************/
+.typed-text{
+ font-size: 2rem;
+ color: rgb(184, 187, 14);
+ opacity: .5;
+ /*********************header main offer***************************/
+ 
+}
+.btn-main-offer{
+  border: 1px solid rgb(83, 29, 29) ;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding:0.625rem 0.75rem 0.75rem 0.75rem;
+
+
+}
+
+ /*********************About me***************************/
+ .about{
+  margin-right: 0px;
+}
+ .about-photo{
+   float: left;
+   background: url(yo.jpeg) ;
+   border-radius: 210px;
+   position: relative;
+   padding: 200px;
+   border: red outset 8px;
+  margin: 30px;
+   align-content: left;
+   background-repeat: no-repeat;
+   background-size: 440px;
+   
+   
+ }
+ .about-text{
+  margin-right:   3rem;
+
+  margin-top:4rem;
+  text-align: right;
+  height: 8rem;
+  width: 30rem;
+  clear: both; 
+  display: inline-block;
+  
+}
+.about-title{
+  font-size: 12vh;
+  color: crimson;
+  font-family: ubuntu;
+
+}
+
+/*****************skills***********************/
+
+.skills{
+
+  
+  display:-ms-flexbox;
+  margin-top:150px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 80px;
+
+}
+.skills>img{
+  width: 90px;
+  transition: .3s;
+}
+
+.skills>h3{
+  text-align: left;
+  font-size: 12vh;
+  color: crimson;
+  font-family: ubuntu;
+
+}
+
+.skills > img:hover{
+  transform: scale(1.5); 
+margin-top: -120px;
+}
+
+/**********************Contact**************************/
+.contact-container{
+  margin-top: 150px;
+  margin-bottom: 100px;
+  display: inline-flex;
+  align-items:flex-start;
+  padding: 0px;
+}
+.LI-profile-badge{
+display: inline ;
+margin-top: 0px;
+}
+
+
+
+.contact>a{
+  font-size: 2vh;
+}
+.contact>p{
+  font-size: 4vh;
+}
+
+.contact>.logoGitHub{
+  width: 200px;
+  
+}
+
+.contact>.logoGmail{
+
+  width: 100px;
+  margin-top: 35px;
+  
+}
+
+/****************portfolio************************/
+
+.Portfolio {
+  position: relative;
+  margin: 5px;
+  border: 2px solid black;
+  float: left;
+  width: 180px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  animation: winanim 0.5s ;
+-webkit-backface-visibility:visible;
+  backface-visibility:visible;
+  box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)
+}
+
+.Portfolio:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+#portfo{
+  text-align: left;
+  font-size: 12vh;
+  color: crimson;
+  font-family: ubuntu;
+}
+.Portfolio img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px
+}
+
+.desc {
+  padding: 5px;
+  text-align: center;
+  font-size: 90%;
+  background:black;
+  color:hotpink
+}
+
+.nav {
+  padding:20px;
+  margin-left:340px;
+  margin-top:-30px;
+}
+
+.nav li a { 
+  margin:5px;
+  padding: 15px 50px; 
+  font-size:16px; 
+  color:hotpink; 
+  background: #000;
+  transition-duration: 0.4s;
+}
+.nav a:hover { 
+  background:#333; 
+}
+.nav .active { 
+  background-color:hotpink !important;
+  color:#fff;
+}
+
+@keyframes winanim {
+  0%{opacity:0;transform:scale3d(.3,.3,.3)}
+  50%{opacity:1}
+  
+}
+
+#gmail{
+  height: 353.2px;
+    width: 325px;
+}
+#mG61Hd > div.freebirdFormviewerViewFormCard.exportFormCard > div.freebirdFormviewerViewFormContent > div.freebirdFormviewerViewNoPadding > div > div.freebirdFormviewerViewHeaderTitleRow{
+  font-family:sans-serif;
+  font-size: 2.5vh;
+  color:red;
+}
+.contact{
+  height: 353.2px;
+  width: 325px;
+  background: #303336;
+  margin-left:50px;
+  display: flexbox;
+  position: relative;
+  margin-top: 0px;
+  text-align: center;
+}
+#cont{
+  position: absolute;
+  bottom: 90vh;
+  text-align: left;
+  font-size: 10vh;
+  color: crimson;
+  font-family: ubuntu;
+  
+}
+
+
+
+
+
+

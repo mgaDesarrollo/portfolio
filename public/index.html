@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -20,11 +21,59 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
     <div id="root"></div>
 
+
+
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
+   <script type="text/javascript">alphabet = new Array("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "[", "]", "{", "}", "/", "?","<", ">", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
+    letter_count = 0;
+    el = $("#loading");
+    word = el.html().trim();
+    finished = false;
+    
+    el.html("");
+    for (var i = 0; i < word.length; i++) {
+      el.append("<span>"+word.charAt(i)+"</span>");
+    }
+    
+    setTimeout(write, 45);
+    incrementer = setTimeout(inc, 1000);
+    
+    function write() {
+      for (var i = letter_count; i < word.length; i++) {
+        var c = Math.floor(Math.random() * 36);
+        $("span")[i].innerHTML = alphabet[c];
+      }
+      if (!finished) {
+        setTimeout(write, 45);
+      }
+    }
+    
+    function inc() {
+      $("span")[letter_count].innerHTML = word[letter_count];
+      $("span:eq("+letter_count+")").addClass("glow");
+      letter_count++;
+      if (letter_count >= word.length) {
+        finished = true;
+        setTimeout(reset, 1500);
+      } else {
+        setTimeout(inc, 1000);
+      }
+    }
+    
+    function reset() {
+      letter_count = 0;
+      finished = false;
+      setTimeout(inc, 1000);
+      setTimeout(write, 75);
+      $("span").removeClass("glow");
+    }</script>
   </body>
 </html>
