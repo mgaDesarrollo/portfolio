@@ -11,7 +11,7 @@ const Header = () => {
 
             <div className="main-info">
                 <h1>Web development front end</h1>
-                <div id="loading"> Web development front end</div>
+                <div id="loading"></div>
                 <Typed 
                 className="typed-text" 
                 strings={["web design","developed","available","trust","front end","creative","proactive"]}
