@@ -10,7 +10,7 @@ const Header = () => {
 
 
             <div className="main-info">
-                <h1>Web development front end</h1>
+                <h1 id='title-main'>Web development front end</h1>
                 <div id="loading"></div>
                 <Typed 
                 className="typed-text" 

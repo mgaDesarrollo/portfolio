@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
+
 .App {
   text-align: center;
   margin: 0px;
@@ -129,6 +130,7 @@ nav u li {
 }
 
 .main-info{
+  background-image: url(circuit.png), absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,12 +145,14 @@ nav u li {
 display:inline-flexbox;
 }
 .logoHeader{
-  opacity: .5;
-  transition: .5s;
+  opacity: .9;
+  transition: 0.5s;
+  width: 60vh;
 }
 .logoHeader:hover{
   transform: scale(1.5);
-  opacity: .3;
+  opacity: 0.3s;
+  top:300px;
 }
 
 .content .main{
@@ -160,6 +164,7 @@ display:inline-flexbox;
 .main-info h1{
   margin-top: 150px;
   color: var(--primary-red);
+  font-family: src(url:dar)
 
 }
 
@@ -376,6 +381,24 @@ margin-top: 0px;
   
 }
 
+#mapa{
+  float: left;
+  display: inline;
+}
+@font-face{
+font-family: 'darktech';
+
+src:url('./darktech.ttf') format(“truetype”);
+}
+@font-face {
+  font-family: 'darktech';
+  src: local('darktech') url('./darktech.ttf');
+
+}
+#title-main{
+  font-family: darktech;
+
+}
 
 
 
